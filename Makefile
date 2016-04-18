@@ -1,5 +1,5 @@
 deploy_to_heroku:
 	heroku login
-	heroku create
+	#heroku create
 	git push heroku master
 
