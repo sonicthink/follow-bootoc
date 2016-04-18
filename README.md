@@ -11,3 +11,8 @@ Run `./gradlew build` to build an executable jar, which will be created under `b
 ```
 ./gradlew bootRun
 ```
+
+### Deploy (Heroku)
+```
+make deploy_to_heroku
+```
