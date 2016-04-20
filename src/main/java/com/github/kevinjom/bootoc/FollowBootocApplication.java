@@ -14,6 +14,7 @@ public class FollowBootocApplication {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(FollowBootocApplication.class)
+                .web(true)
                 .bannerMode(Banner.Mode.CONSOLE)
                 .banner(new ResourceBanner(new ClassPathResource("banner.txt")))
                 .listeners(startedEventListener(), readyEventListener())
