@@ -14,6 +14,7 @@ public class FollowBootocApplication {
         new SpringApplicationBuilder(FollowBootocApplication.class)
                 .bannerMode(Banner.Mode.CONSOLE)
                 .banner(new ResourceBanner(new ClassPathResource("banner.txt")))
+                .listeners(new BootocAppStartedListener())
                 .run(args);
     }
 }
