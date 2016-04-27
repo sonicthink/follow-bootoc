@@ -35,6 +35,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-jetty')
+    compile('org.springframework.boot:spring-boot-starter-hateoas')
+    compile('org.webjars:hal-browser:9f96c74')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
