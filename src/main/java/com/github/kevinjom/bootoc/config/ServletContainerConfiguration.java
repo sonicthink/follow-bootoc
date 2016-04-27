@@ -10,10 +10,7 @@ public class ServletContainerConfiguration {
 
     @Bean
     public EmbeddedServletContainerFactory servletContainerFactory() {
-        JettyEmbeddedServletContainerFactory factory = new JettyEmbeddedServletContainerFactory();
-        factory.setPort(8081);
-
-        return factory;
+        return new JettyEmbeddedServletContainerFactory();
     }
 
 }
