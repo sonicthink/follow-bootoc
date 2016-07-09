@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  app:
+    image: qlik/gradle
+    volumes:
+    - .:/follow-bootoc
+    - gradle-cache:/root/.gradle/caches
+    working_dir: /follow-bootoc
+    environment:
+      DB_HOST: postgres
+      DB_NAME: follow_bootoc
+      DB_USERNAME: kevinjom
+      DB_PASSWORD: pass1234
+      DB_MASTER_USERNAME: postgres
+      DB_MASTER_PASSWORD: password
+    command: ["bootRun"]
+    ports:
+      - "8088:8088"
+
+  postgres:
+    image: postgres:9.5
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
+
+volumes:
+  gradle-cache:
